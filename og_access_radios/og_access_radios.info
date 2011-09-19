@@ -1,0 +1,6 @@
+name = Organic groups access control (radios)
+description = "Enable access control for private posts and private groups with radio buttons."
+package = "Organic groups"
+dependencies[] = og
+dependencies[] = og_access
+core = 6.x

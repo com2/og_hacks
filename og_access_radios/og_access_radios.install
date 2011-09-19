@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * An implementation of hook_install().
+ */
+function og_access_radios_install() {
+  // Put this module after OG_ACCESS so it can form_alter as needed.
+  db_query("UPDATE {system} SET weight = 2 WHERE name = 'og_access_radios'");
+}
+
+function og_access_radios_disable() {
+  if (variable_get('og_visibility',0) == 4) {
+    variable_set('og_visibility',3);
+  }
+}
